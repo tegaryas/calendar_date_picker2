@@ -267,14 +267,25 @@ class _DayPickerState extends State<_DayPicker> {
           )) {
             dayWidget = Stack(
               children: [
-                Row(children: [
-                  const Spacer(),
-                  Expanded(
-                    child: Container(
-                      decoration: rangePickerIncludedDayDecoration,
+                Row(
+                  children: [
+                    const Spacer(),
+                    Expanded(
+                      child: Container(
+                        decoration: rangePickerIncludedDayDecoration.copyWith(
+                          borderRadius:
+                              firstDayWeekDate(dayToBuild) == dayToBuild
+                                  ? const BorderRadius.horizontal(
+                                      left: Radius.circular(50))
+                                  : lastDayWeekDate(dayToBuild) == dayToBuild
+                                      ? const BorderRadius.horizontal(
+                                          right: Radius.circular(50))
+                                      : BorderRadius.zero,
+                        ),
+                      ),
                     ),
-                  ),
-                ]),
+                  ],
+                ),
                 dayWidget,
               ],
             );
@@ -287,7 +298,15 @@ class _DayPickerState extends State<_DayPicker> {
                 Row(children: [
                   Expanded(
                     child: Container(
-                      decoration: rangePickerIncludedDayDecoration,
+                      decoration: rangePickerIncludedDayDecoration.copyWith(
+                        borderRadius: firstDayWeekDate(dayToBuild) == dayToBuild
+                            ? const BorderRadius.horizontal(
+                                left: Radius.circular(50))
+                            : lastDayWeekDate(dayToBuild) == dayToBuild
+                                ? const BorderRadius.horizontal(
+                                    right: Radius.circular(50))
+                                : BorderRadius.zero,
+                      ),
                     ),
                   ),
                   const Spacer(),
@@ -299,7 +318,15 @@ class _DayPickerState extends State<_DayPicker> {
             dayWidget = Stack(
               children: [
                 Container(
-                  decoration: rangePickerIncludedDayDecoration,
+                  decoration: rangePickerIncludedDayDecoration.copyWith(
+                    borderRadius: firstDayWeekDate(dayToBuild) == dayToBuild
+                        ? const BorderRadius.horizontal(
+                            left: Radius.circular(50))
+                        : lastDayWeekDate(dayToBuild) == dayToBuild
+                            ? const BorderRadius.horizontal(
+                                right: Radius.circular(50))
+                            : BorderRadius.zero,
+                  ),
                 ),
                 dayWidget,
               ],

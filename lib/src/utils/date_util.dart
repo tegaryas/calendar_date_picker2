@@ -1,3 +1,5 @@
+import 'dart:core';
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -48,4 +50,14 @@ int getDayRowsCount(int year, int month, int firstDayOfWeekIndex) {
   final int totalDays = DateUtils.getDaysInMonth(year, month);
   final int remainingDays = totalDays - (7 - monthFirstDayOffset);
   return (remainingDays / 7).ceil() + 1;
+}
+
+DateTime firstDayWeekDate(DateTime date) {
+  final value = date.subtract(Duration(days: date.weekday - 1));
+  return DateTime(value.year, value.month, value.day);
+}
+
+DateTime lastDayWeekDate(DateTime date) {
+  final value = date.add(Duration(days: DateTime.daysPerWeek - date.weekday));
+  return DateTime(value.year, value.month, value.day);
 }
