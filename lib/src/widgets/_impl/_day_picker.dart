@@ -253,6 +253,8 @@ class _DayPickerState extends State<_DayPicker> {
 
         if (isDateInBetweenRangePickerSelectedDates) {
           final rangePickerIncludedDayDecoration = BoxDecoration(
+            borderRadius: widget.config.selectedRangeHighlightBorderRadius ??
+                BorderRadius.circular(50),
             color: widget.config.selectedRangeHighlightColor ??
                 (widget.config.selectedDayHighlightColor ??
                         selectedDayBackground)

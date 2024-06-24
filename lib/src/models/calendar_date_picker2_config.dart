@@ -122,6 +122,7 @@ class CalendarDatePicker2Config {
     this.selectedDayTextStyle,
     this.selectedDayHighlightColor,
     this.selectedRangeHighlightColor,
+    this.selectedRangeHighlightBorderRadius,
     this.disabledDayTextStyle,
     this.todayTextStyle,
     this.yearTextStyle,
@@ -236,6 +237,8 @@ class CalendarDatePicker2Config {
   /// The highlight color for day(s) included in the selected range
   /// Only applicable when [calendarType] is [CalendarDatePicker2Type.range]
   final Color? selectedRangeHighlightColor;
+
+  final BorderRadius? selectedRangeHighlightBorderRadius;
 
   /// Custom text style for disabled calendar day(s)
   final TextStyle? disabledDayTextStyle;
@@ -384,6 +387,7 @@ class CalendarDatePicker2Config {
     TextStyle? selectedDayTextStyle,
     Color? selectedDayHighlightColor,
     Color? selectedRangeHighlightColor,
+    BorderRadius? selectedRangeHighlightBorderRadius,
     TextStyle? disabledDayTextStyle,
     TextStyle? todayTextStyle,
     TextStyle? yearTextStyle,
@@ -451,6 +455,8 @@ class CalendarDatePicker2Config {
           selectedDayHighlightColor ?? this.selectedDayHighlightColor,
       selectedRangeHighlightColor:
           selectedRangeHighlightColor ?? this.selectedRangeHighlightColor,
+      selectedRangeHighlightBorderRadius: selectedRangeHighlightBorderRadius ??
+          this.selectedRangeHighlightBorderRadius,
       disabledDayTextStyle: disabledDayTextStyle ?? this.disabledDayTextStyle,
       todayTextStyle: todayTextStyle ?? this.todayTextStyle,
       yearTextStyle: yearTextStyle ?? this.yearTextStyle,
@@ -541,6 +547,7 @@ class CalendarDatePicker2WithActionButtonsConfig
     TextStyle? selectedDayTextStyle,
     Color? selectedDayHighlightColor,
     Color? selectedRangeHighlightColor,
+    BorderRadius? selectedRangeHighlightBorderRadius,
     TextStyle? disabledDayTextStyle,
     TextStyle? todayTextStyle,
     TextStyle? yearTextStyle,
@@ -613,6 +620,8 @@ class CalendarDatePicker2WithActionButtonsConfig
           selectedRangeDayTextStyle: selectedRangeDayTextStyle,
           selectedDayHighlightColor: selectedDayHighlightColor,
           selectedRangeHighlightColor: selectedRangeHighlightColor,
+          selectedRangeHighlightBorderRadius:
+              selectedRangeHighlightBorderRadius,
           disabledDayTextStyle: disabledDayTextStyle,
           todayTextStyle: todayTextStyle,
           yearTextStyle: yearTextStyle,
@@ -705,6 +714,7 @@ class CalendarDatePicker2WithActionButtonsConfig
     TextStyle? selectedRangeDayTextStyle,
     Color? selectedDayHighlightColor,
     Color? selectedRangeHighlightColor,
+    BorderRadius? selectedRangeHighlightBorderRadius,
     TextStyle? disabledDayTextStyle,
     TextStyle? todayTextStyle,
     TextStyle? yearTextStyle,
@@ -782,6 +792,8 @@ class CalendarDatePicker2WithActionButtonsConfig
           selectedDayHighlightColor ?? this.selectedDayHighlightColor,
       selectedRangeHighlightColor:
           selectedRangeHighlightColor ?? this.selectedRangeHighlightColor,
+      selectedRangeHighlightBorderRadius: selectedRangeHighlightBorderRadius ??
+          this.selectedRangeHighlightBorderRadius,
       disabledDayTextStyle: disabledDayTextStyle ?? this.disabledDayTextStyle,
       todayTextStyle: todayTextStyle ?? this.todayTextStyle,
       yearTextStyle: yearTextStyle ?? this.yearTextStyle,
